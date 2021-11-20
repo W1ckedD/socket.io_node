@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>گفتگو</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js"
+      integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/js/socket.io.js" defer></script>
+    <script src="/js/main.js" defer></script>
+  </head>
+  <body>
+    <section class="sidebar">
+      <button class="btn" id="leaveButton">
+        <i class="fa fa-window-close"></i>
+      </button>
+      <div class="sidebar-header">
+        <h2 id="roomName"></h2>
+      </div>
+      <hr />
+      <div class="sidebar-users">
+        <ul class="users-list" id="usersList">
+          <li class="users-list-item"></li>
+        </ul>
+      </div>
+    </section>
+    <div class="container">
+      <div class="chat-container" id="chatContainer">
+      </div>
+      <div class="input-container">
+        <button class="btn btn-primary" id="send">
+          <i class="fa fa-paper-plane"></i>
+        </button>
+        <input type="text" id="inputMessage" />
+      </div>
+    </div>
+  </body>
+</html>
