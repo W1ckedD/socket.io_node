@@ -184,11 +184,12 @@ input, select, button {
   width: 100%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .sidebar {
     display: none;
   }
   .container {
     margin-right: 0;
+    width: 100vw;
   }
 }
