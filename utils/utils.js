@@ -2,6 +2,21 @@ import moment from 'moment';
 
 const users = [];
 
+const messages = [];
+
+export const addMessage = (message) => {
+  messages.push(message);
+  return message;
+};
+
+export const getRoomMessages = (room) => {
+  return messages.filter((message) => message.room === room);
+};
+
+export const getMessage = (id) => {
+  return messages.find((message) => message.id === id);
+};
+
 export const userJoin = (id, username, room) => {
   const user = { id, username, room };
   users.push(user);
@@ -24,6 +39,13 @@ export const userLeave = (id) => {
   }
 };
 
-export const formatMessage = (username, message) => {
-  return { username, message, time: moment().format('h:mm a') };
+export const formatMessage = (id, room, username, message, replyTo = null) => {
+  return {
+    id,
+    room,
+    replyTo,
+    username,
+    message,
+    time: moment().format('h:mm a'),
+  };
 };
